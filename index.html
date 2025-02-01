@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Menyoo Mod Menu offers free GTA 5 modding with powerful features like vehicle spawning, god mode, and money glitches. Enjoy the ultimate modding experience in 2025!">
-        <meta name="keywords" content="menyoo mod menu, free gta 5 mod menu, gta 5 modding, gta v mods, menyoo gta v, gta 5 cheats, free gta v mod menu, menyoo gta 5, gta v modding 2025">
-        <meta property="og:title" content="Menyoo Mod Menu - Free GTA 5 Modding for 2025">
-        <meta property="og:description" content="Menyoo Mod Menu offers free GTA 5 modding with features like vehicle spawning, god mode, and money glitches.">
-        <meta property="og:image" content="assets/og.png">
-        <meta property="og:url" content="https://menyoomod.com/">
-        <title>Menyoo Mod Menu - Free GTA 5 Modding for 2025</title>
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>   
-
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menyoo Mod Menu offers free GTA 5 modding with powerful features like vehicle spawning, god mode, and money glitches. Enjoy the ultimate modding experience in 2025!">
+    <meta name="keywords" content="menyoo mod menu, free gta 5 mod menu, gta 5 modding, gta v mods, menyoo gta v, gta 5 cheats, free gta v mod menu, menyoo gta 5, gta v modding 2025">
+    <meta property="og:title" content="Menyoo Mod Menu - Free GTA 5 Modding for 2025">
+    <meta property="og:description" content="Menyoo Mod Menu offers free GTA 5 modding with features like vehicle spawning, god mode, and money glitches.">
+    <meta property="og:image" content="assets/og.png">
+    <meta property="og:url" content="https://menyoomod.com/">
+    <title>Menyoo Mod Menu - Free GTA 5 Modding for 2025</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         /* Enable smooth scrolling */
@@ -31,8 +28,8 @@
             height: 100vh; /* Full viewport height for demo purposes */
         }
     </style>
-
 </head>
+
 <body>
 
 <div class="container" id="home">
@@ -284,8 +281,6 @@
 </footer>
 
 
-
-
 <script>
     // Select all FAQ items
 const faqItems = document.querySelectorAll(".faq-item");
@@ -310,13 +305,10 @@ faqItems.forEach((item) => {
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("#home, #features, #about, #faq");
         const navLinks = document.querySelectorAll(".menu a");
-
         function changeActiveLink() {
-            let scrollPosition = window.scrollY + 100; // Add offset for header height
-
+            let scrollPosition = window.scrollY + 100;
             sections.forEach((section) => {
-                if (scrollPosition >= section.offsetTop && 
-                    scrollPosition < section.offsetTop + section.offsetHeight) {
+                if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
                     navLinks.forEach((link) => {
                         link.classList.remove("active");
                         if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
@@ -325,23 +317,9 @@ faqItems.forEach((item) => {
                     });
                 }
             });
-
-            // Handle special case when scrolling to the top
-            if (scrollPosition < document.querySelector("#features").offsetTop) {
-                navLinks.forEach((link) => link.classList.remove("active"));
-                document.querySelector(".menu a[href='#home']").classList.add("active");
-            }
         }
-
         window.addEventListener("scroll", changeActiveLink);
-        changeActiveLink(); // Run on page load to set the correct section
     });
 </script>
-
-
-
-
-</div>
-
 </body>
 </html>
